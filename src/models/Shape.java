@@ -25,11 +25,7 @@ public class Shape {
 
     // getAverageSide()
     public double getAverageSide() {
-        double sumOfSideLength = 0;
-        for(int i = 0; i < points.size() - 1; i++)
-            sumOfSideLength += points.get(i).distance(points.get(i + 1));
-        sumOfSideLength += points.get(points.size() - 1).distance(points.get(0));
-        double AverageSide = sumOfSideLength / points.size();
+        double AverageSide = calculatePerimeter() / points.size();
         return AverageSide;
     }
 
